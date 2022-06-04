@@ -14,8 +14,8 @@ const adminRoutes = require('./src/routes/admin');
 const planRoutes = require('./src/routes/plans');
 
 //Specify the application routes
-app.use('/api/v1/', authRoutes);
-app.use('/api/v1/user/', userRoutes);
-app.use('/api/v1/subscription/', subscriptionRoutes);
-app.use('/api/v1/admin/', adminRoutes);
-app.use('/api/v1/plans/', planRoutes);
+app.use('/api/v1', authRoutes);
+app.use('/api/v1/user', userRoutes);
+app.use('/api/v1/subscription', subscriptionRoutes);
+app.use('/api/v1/admin', adminRoutes);
+app.use('/api/v1/plans', planRoutes);
