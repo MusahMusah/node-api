@@ -3,7 +3,9 @@ const verifyToken = require('../../middleware/verifyToken');
 const throttle = require('../../middleware/throttle');
 
 // Importing the auth controller
-const authController = require('../../Controllers/Api/Auth/authController');
+const authController = require('../../Controllers/Api/Auth/AuthController');
+
+
 router.post('/login', [throttle(60, 1)], authController.login);
 router.post('/register', [throttle(60, 1)], authController.register);
 router.post('/verify-account', [throttle(60, 1), verifyToken], authController.verifyAccount);
